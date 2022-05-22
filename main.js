@@ -4,6 +4,65 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+  const emptyHeart = document.querySelectorAll(".like-glyph")
+  console.log(emptyHeart)
+  emptyHeart.forEach((heart) =>{
+    heart.addEventListener('click', () => {
+      console.log(emptyHeart.textContent)
+      mimicServerCall(heart)
+      .then(() =>{
+        emptyHeart.textContent = FULL_HEART
+        emptyHeart.className = 'activated-heart'})
+
+        .catch((err) => {
+              const error = document.querySelector('#modal')
+              const modal = document.querySelector('#modal-message')
+              error.removeAttribute('class')
+              modal.textContent = err
+              setTimeout(() => {error.setAttribute('class', 'hidden')}, 3000)
+    
+    })})})
+  
+
+    // addEventListener('click', {})
+    
+    // mimicServerCall()
+      
+    //    .then(() =>{
+    //    emptyHeart.textContent = FULL_HEART
+    //    emptyHeart.className = 'activated-heart'
+    //   })
+
+    //   .catch((err) => {
+    //     const error = document.querySelector('#modal')
+    //     const modal = document.querySelector('#modal-message')
+    //     error.removeAttribute('class')
+    //     modal.textContent = err
+    //     setTimeout(() => {error.setAttribute('class', 'hidden')}, 3000)
+    //   })
+
+    // })
+  
+  //  const filledHeart = document.querySelectorAll('like-glpyh')
+  //  filledHeart.forEach(heart =>{
+  //    heart.addEventListener('click',{
+  
+      
+            
+         
+      
+
+     
+  
+   
+
+
+  
+   ;
+  
+    
+
+
 
 
 
